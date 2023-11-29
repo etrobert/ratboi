@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      fieldset {
+        display: grid;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <legend>Infos Personnelles</legend>
+        <label>
+          Nom:
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Prénom:
+          <input type="text" name="first-name" required />
+        </label>
+        <label>
+          Email:
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Phone:
+          <input type="tel" name="tel" />
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>
+          Description Précise du Projet:
+          <textarea> </textarea>
+        </label>
+        <label>
+          Style du Tattouage:
+          <textarea> </textarea>
+        </label>
+        <label>
+          Taille:
+          <select>
+            <option value="">--Please choose an option--</option>
+            <option value="small">Petit (environ 5cm x 5cm)</option>
+            <option value="medium">Moyen (environ 15cm x 15cm)</option>
+            <option value="big">Grand (environ 30cm x 30cm)</option>
+          </select>
+        </label>
+        <label>Budget Max: <input type="number" />€ </label>
+      </fieldset>
+      <input type="submit" value="Subscribe!" />
+    </form>
+  </body>
+</html>
