@@ -13,6 +13,7 @@
     "files.exclude": {
       "supabase/functions/": true
     },
+    "editor.formatOnSave": true,
     "liveServer.settings.multiRootWorkspaceName": "project-root"
   }
 }
