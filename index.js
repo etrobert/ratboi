@@ -12,16 +12,19 @@ const prod = {
 
 const env = prod;
 
-fetch(`${env.SUPABASE_URL}/functions/v1/hello-world`, {
-  method: 'POST',
-  headers: {
-    Authorization: `Bearer ${env.SUPABASE_ANON_KEY}`,
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
-    name: 'Functions',
-  }),
-})
-  .then((response) => response.json())
-  .then((data) => console.log(data))
-  .catch((error) => console.error('Error:', error));
+const helloWorld = (name) =>
+  fetch(`${env.SUPABASE_URL}/functions/v1/hello-world`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${env.SUPABASE_ANON_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      name: 'Functions',
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => console.log(data))
+    .catch((error) => console.error('Error:', error));
+
+helloWorld('Functions');
